@@ -47,7 +47,7 @@ public class BookDao {
 //        return entityManager.createQuery("select b from Book b").getResultList();
 //    }
     public List<Book> allWithAuthors() {
-        Query query = entityManager.createQuery("select b from Book b join fetch b.authors");
+        Query query = entityManager.createQuery("select distinct b from Book b join fetch b.authors");
         List<Book> books = query.getResultList();
         return books;
     }
@@ -77,11 +77,11 @@ public class BookDao {
     }
 
     public List<Book> allWithAuthor(Author author) {
-        Query query = entityManager.createQuery(
-                "select b from Book b join b.publisher " +
-                "join fetch b.authors where :author member of b.authors");
-        query.setParameter("author", author);
-        return query.getResultList();
+        return entityManager.createQuery(
+                        "select b from Book b join b.publisher " +
+                                "join fetch b.authors where :author member of b.authors")
+                .setParameter("author", author)
+                .getResultList();
 
     }
 

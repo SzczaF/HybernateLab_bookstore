@@ -3,12 +3,11 @@ package pl.coderslab.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
 import pl.coderslab.model.Publisher;
+import pl.coderslab.service.AuthorService;
 import pl.coderslab.service.BookService;
 import pl.coderslab.service.PublisherService;
 
@@ -19,6 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BookFormController {
     private final PublisherService publisherService;
+    private final AuthorService authorService;
     private final BookService bookService;
 
     @GetMapping("/add")
@@ -29,13 +29,42 @@ public class BookFormController {
 
     @PostMapping("/add")
     public String addSave(Book book) {
-        System.out.println(book.toString());
+//        System.out.println(book.toString());
         bookService.save(book);
+        return "redirect:/book/all";
+    }
+    @GetMapping("/edit/{id}")
+    public String edit(@PathVariable long id, Model model) {
+        Book book = bookService.findById(id);
+        model.addAttribute("book", book);
+        return "/book/form";
+    }
+    @PostMapping("/edit/{id}")
+    public String editSave(Book book) {
+//        Book book = bookService.findById(id);
+        bookService.update(book);
+        return "redirect:/book/all";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable long id, Model model) {
+        Book book = bookService.findById(id);
+        model.addAttribute("book", book);
+        return "/book/confirm-delete";
+    }
+    @PostMapping("/delete/{id}")
+    public String deleteSave(Book book) {
+//        Book book = bookService.findById(id);
+        bookService.delete(book);
         return "redirect:/book/all";
     }
 
     @ModelAttribute("publishers")
     public List<Publisher> getPublishers() {
         return publisherService.all();
+    }
+    @ModelAttribute("authorsList")
+    public List<Author> getAuthors() {
+        return authorService.all();
     }
 }

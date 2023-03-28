@@ -13,4 +13,8 @@ public class Author {
     long id;
     String firstName;
     String lastName;
+
+    public String getFullName(){
+        return lastName + " " + firstName;
+    }
 }

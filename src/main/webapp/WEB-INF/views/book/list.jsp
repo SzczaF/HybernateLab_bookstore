@@ -29,7 +29,17 @@ Lista książek<br><br>
             <td>${book.rating}</td>
             <td>${book.description}</td>
             <td>${book.publisher.name}</td>
-            <td><a href="/"></a></td>
+<%--            <td>${book.author.fullName}</td>--%>
+            <td>
+                <a href="/book/form/edit/${book.id}">
+                    <button>Edytuj</button>
+                </a>
+            </td>
+            <td>
+                <a href="/book/form/delete/${book.id}">
+                    <button style="color: darkred">Usuń</button>
+                </a>
+            </td>
         </tr>
     </c:forEach>
 </table>
