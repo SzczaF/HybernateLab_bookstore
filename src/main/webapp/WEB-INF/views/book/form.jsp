@@ -25,7 +25,7 @@
     <form:select path="authors" multiple="true">
         <form:options items="${authorsList}" itemLabel="fullName" itemValue="id"/>
     </form:select><br>
-    <input type="submit"/>
+    <button type="submit">Zatwierdź</button>
 </form:form>
 </body>
 </html>

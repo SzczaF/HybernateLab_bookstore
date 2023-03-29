@@ -46,15 +46,15 @@ public class BookFormController {
         return "redirect:/book/all";
     }
 
-    @GetMapping("/delete/{id}")
-    public String delete(@PathVariable long id, Model model) {
+    @GetMapping("/confirm/{id}")
+    public String confirm(@PathVariable long id, Model model) {
         Book book = bookService.findById(id);
         model.addAttribute("book", book);
         return "/book/confirm-delete";
     }
-    @PostMapping("/delete/{id}")
-    public String deleteSave(Book book) {
-//        Book book = bookService.findById(id);
+    @GetMapping("/delete/{id}")
+    public String deleteSave(@PathVariable long id) {
+        Book book = bookService.findById(id);
         bookService.delete(book);
         return "redirect:/book/all";
     }

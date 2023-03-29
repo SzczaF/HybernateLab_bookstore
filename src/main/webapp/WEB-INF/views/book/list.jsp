@@ -36,7 +36,7 @@ Lista książek<br><br>
                 </a>
             </td>
             <td>
-                <a href="/book/form/delete/${book.id}">
+                <a href="/book/form/confirm/${book.id}">
                     <button style="color: darkred">Usuń</button>
                 </a>
             </td>

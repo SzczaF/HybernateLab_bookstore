@@ -9,19 +9,32 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        div.button {
+            float: left;
+            padding-top: 15px;
+            padding-right: 15px;
+        }
+
+    </style>
 </head>
 <body>
 <div>
     Czy na pewno chcesz usunąć tę księżkę?<br>
-    ${book}<br>
+    id: ${book.id}<br>
+    Tytuł: ${book.title}<br>
 </div>
-<div>
+
+<div class="button">
     <a href="/book/form/delete/${book.id}">
         <button style="color: darkred">Potwierdź</button>
     </a>
+</div>
+<div class="button">
     <a href="/book/all">
         <button>Anuluj</button>
     </a>
 </div>
+
 </body>
 </html>
