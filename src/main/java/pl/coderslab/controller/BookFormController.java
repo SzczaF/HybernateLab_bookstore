@@ -59,7 +59,7 @@ public class BookFormController {
         return "redirect:/book/all";
     }
 
-    @ModelAttribute("publishers")
+    @ModelAttribute("publishersList")
     public List<Publisher> getPublishers() {
         return publisherService.all();
     }

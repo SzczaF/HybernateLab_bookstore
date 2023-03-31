@@ -10,7 +10,7 @@ import pl.coderslab.service.AuthorService;
 
 
 @Controller
-@RequestMapping("/publisher/form")
+@RequestMapping("/author/form")
 @RequiredArgsConstructor
 public class AuthorFormConrtroller {
     private final AuthorService authorService;

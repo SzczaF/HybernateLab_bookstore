@@ -19,7 +19,7 @@
     Wydawca:
     <form:select path="publisher.id">
         <form:option value="0" label="-- wybierz --"/>
-        <form:options items="${publishers}" itemLabel="name" itemValue="id"/>
+        <form:options items="${publishersList}" itemLabel="name" itemValue="id"/>
     </form:select><br>
     Autor:
     <form:select path="authors" multiple="true">
