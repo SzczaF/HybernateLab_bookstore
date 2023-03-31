@@ -9,14 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24f206eb-9ef9-4b8e-a489-5c986920904c" name="Changes" comment="init repo + part of classes done">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/confirm-delete.jsp" afterDir="false" />
+    <list default="true" id="24f206eb-9ef9-4b8e-a489-5c986920904c" name="Changes" comment="finished all hope it works :D">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorFormConrtroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherFormConrtroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/author/confirm-delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/author/form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/author/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publisher/confirm-delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publisher/form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publisher/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +71,8 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/szczaf/CODERSLAB/BookAPI",
+    "last_opened_file_path": "/home/szczaf/CODERSLAB/Spring01hibernate/src/main/webapp/WEB-INF/views/publisher",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,11 +91,19 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pl.coderslab.service" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publisher" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/author" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF/views" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.coderslab.controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,7 +204,8 @@
       <option name="presentableId" value="Default" />
       <updated>1679129731110</updated>
       <workItem from="1679129733903" duration="64623000" />
-      <workItem from="1680036365287" duration="5584000" />
+      <workItem from="1680036365287" duration="12505000" />
+      <workItem from="1680280140864" duration="7865000" />
     </task>
     <task id="LOCAL-00001" summary="init repo + part of classes done">
       <created>1679943414321</created>
@@ -198,7 +214,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679943414321</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="edit/add postMapping not working :/">
+      <created>1680042117153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680042117153</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed Author convertion from String by adding converter to registry">
+      <created>1680125096976</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680125096976</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finnished edit and delete book">
+      <created>1680130377557</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680130377557</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +243,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init repo + part of classes done" />
-    <option name="LAST_COMMIT_MESSAGE" value="init repo + part of classes done" />
+    <MESSAGE value="edit/add postMapping not working :/" />
+    <MESSAGE value="fixed Author convertion from String by adding converter to registry" />
+    <MESSAGE value="finnished edit and delete book" />
+    <MESSAGE value="finished all hope it works :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished all hope it works :D" />
   </component>
 </project>

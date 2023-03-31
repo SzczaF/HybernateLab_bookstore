@@ -47,39 +47,50 @@ public class BookDao {
 //        return entityManager.createQuery("select b from Book b").getResultList();
 //    }
     public List<Book> allWithAuthors() {
-        Query query = entityManager.createQuery("select distinct b from Book b join fetch b.authors");
-        List<Book> books = query.getResultList();
-        return books;
+        Query query = entityManager.createQuery("select distinct b from Book b join fetch b.authors order by b.id asc");
+        return query.getResultList();
     }
 
     public List<Book> allWithRating(int rating) {
-        Query query = entityManager.createQuery("select b from Book b where b.rating = :rating");
+        Query query = entityManager.createQuery("select b from Book b where b.rating = :rating order by b.id asc");
         query.setParameter("rating", rating);
         return query.getResultList();
     }
 
     public List<Book> findAllWithRatingAndAuthors(int r) {
-        Query query = entityManager.createQuery("SELECT b from Book b left join Fetch b.authors where b.rating = :rating");
+        Query query = entityManager.createQuery(
+                "SELECT b from Book b " +
+                "left join Fetch b.authors " +
+                "where b.rating = :rating " +
+                "order by b.id asc");
         query.setParameter("rating", r);
         return query.getResultList();
     }
 
     public List<Book> allWithAnyPublisher() {
-        return entityManager.createQuery("select b from Book b join b.publisher join fetch b.authors").getResultList();
+        return entityManager.createQuery(
+                "select b from Book b " +
+                "join b.publisher " +
+                "join fetch b.authors " +
+                "order by b.id asc").getResultList();
     }
 
     public List<Book> allWithPublisher(Publisher publisher) {
         Query query = entityManager.createQuery(
-                "select b from Book b join b.publisher " +
-                        "left join fetch b.authors where b.publisher =:publisher");
+                "select b from Book b " +
+                        "join b.publisher " +
+                        "left join fetch b.authors where b.publisher =:publisher " +
+                        "order by b.id asc");
         query.setParameter("publisher", publisher);
         return query.getResultList();
     }
 
     public List<Book> allWithAuthor(Author author) {
         return entityManager.createQuery(
-                        "select b from Book b join b.publisher " +
-                                "join fetch b.authors where :author member of b.authors")
+                        "select b from Book b " +
+                                "join b.publisher " +
+                                "join fetch b.authors " +
+                                "where :author member of b.authors")
                 .setParameter("author", author)
                 .getResultList();
 

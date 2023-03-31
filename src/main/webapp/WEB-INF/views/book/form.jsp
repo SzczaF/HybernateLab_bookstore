@@ -25,7 +25,12 @@
     <form:select path="authors" multiple="true">
         <form:options items="${authorsList}" itemLabel="fullName" itemValue="id"/>
     </form:select><br>
+
     <button type="submit">Zatwierdź</button>
+
 </form:form>
+
+<a href="/author/form/add">Dodaj autora</a><br>
+<a href="/publisher/form/add">Dodaj wydawcę</a><br><br>
 </body>
 </html>

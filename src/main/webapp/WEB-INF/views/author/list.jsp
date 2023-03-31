@@ -12,9 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/book/form/add">Dodaj książkę</a><br>
-<a href="/author/form/add">Dodaj autora</a><br>
-<a href="/publisher/form/add">Dodaj wydawcę</a><br><br>
+<a href="/book/form/add">Dodaj książkę</a><br><br>
 Lista książek<br><br>
 <table border="1">
     <tr>
@@ -24,21 +22,19 @@ Lista książek<br><br>
         <td>Opis</td>
         <td>Wydawca</td>
     </tr>
-    <c:forEach items="${books}" var="book">
+    <c:forEach items="${authorsList}" var="author">
         <tr>
-            <td>${book.id}</td>
-            <td>${book.title}</td>
-            <td>${book.rating}</td>
-            <td>${book.description}</td>
-            <td>${book.publisher.name}</td>
-<%--            <td>${book.author.fullName}</td>--%>
+            <td>${author.id}</td>
+            <td>${author.firstName}</td>
+            <td>${author.lastName}</td>
+
             <td>
-                <a href="/book/form/edit/${book.id}">
+                <a href="/author/form/edit/${author.id}">
                     <button>Edytuj</button>
                 </a>
             </td>
             <td>
-                <a href="/book/form/confirm/${book.id}">
+                <a href="/author/form/confirm/${author.id}">
                     <button style="color: darkred">Usuń</button>
                 </a>
             </td>
