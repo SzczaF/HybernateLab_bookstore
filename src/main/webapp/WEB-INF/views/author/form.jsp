@@ -14,8 +14,8 @@
 </head>
 <body>
 <form:form method="post" modelAttribute="author">
-    Tytuł: <form:input path="firstName"/><br>
-    Ocena: <form:input path="lastName"/><br>
+    Imię: <form:input path="firstName"/><br>
+    Nazwisko: <form:input path="lastName"/><br>
     <button type="submit">Zatwierdź</button>
 </form:form>
 </body>

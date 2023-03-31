@@ -13,7 +13,7 @@
 </head>
 <body>
 <form:form method="post" modelAttribute="publisher">
-    Tytuł: <form:input path="name"/><br>
+    Nazwa: <form:input path="name"/><br>
     <button type="submit">Zatwierdź</button>
 </form:form>
 </body>

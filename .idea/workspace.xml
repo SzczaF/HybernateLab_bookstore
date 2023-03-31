@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24f206eb-9ef9-4b8e-a489-5c986920904c" name="Changes" comment="publisher and author endpoint fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorFormConrtroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorFormConrtroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherFormConrtroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherFormConrtroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+    <list default="true" id="24f206eb-9ef9-4b8e-a489-5c986920904c" name="Changes" comment="publisher and author endpoint additional fixes">
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/author/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/author/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publisher/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publisher/form.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +192,7 @@
       <updated>1679129731110</updated>
       <workItem from="1679129733903" duration="64623000" />
       <workItem from="1680036365287" duration="12505000" />
-      <workItem from="1680280140864" duration="9205000" />
+      <workItem from="1680280140864" duration="9460000" />
     </task>
     <task id="LOCAL-00001" summary="init repo + part of classes done">
       <created>1679943414321</created>
@@ -245,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680288915073</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="publisher and author endpoint additional fixes">
+      <created>1680289530340</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680289530340</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +263,7 @@
     <MESSAGE value="finnished edit and delete book" />
     <MESSAGE value="finished all hope it works :D" />
     <MESSAGE value="publisher and author endpoint fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="publisher and author endpoint fixed" />
+    <MESSAGE value="publisher and author endpoint additional fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="publisher and author endpoint additional fixes" />
   </component>
 </project>
