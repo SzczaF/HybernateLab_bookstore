@@ -22,7 +22,5 @@
 
 </form:form>
 
-<a href="/author/form/add">Dodaj autora</a><br>
-<a href="/publisher/form/add">Dodaj wydawcę</a><br><br>
 </body>
 </html>

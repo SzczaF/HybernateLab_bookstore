@@ -5,7 +5,7 @@
 <div>
     Czy na pewno chcesz usunąć tego autora?<br>
     id: ${author.id}<br>
-    Tytuł: ${author.getFullname}<br>
+    Tytuł: ${author.fullName}<br>
 </div>
 
 <div class="button">

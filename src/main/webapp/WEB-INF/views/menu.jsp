@@ -4,13 +4,18 @@
 <html>
 <head>
     <title>BookStore</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <style>
+        body {
+            font-family: "Ubuntu", sans-serif;
+        }
+
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #333333;
+            background-color: darkblue;
         }
 
         li {
@@ -26,7 +31,7 @@
         }
 
         li a:hover {
-            background-color: #111111;
+            background-color: cornflowerblue;
         }
 
         div.button {
@@ -38,7 +43,11 @@
 </head>
 <body>
 <ul>
-    <a href="/book/form/add">Dodaj książkę</a><br>
-    <a href="/author/form/add">Dodaj autora</a><br>
-    <a href="/publisher/form/add">Dodaj wydawcę</a><br><br>
+    <li><a href="/book/all">Ksiązki</a></li>
+    <li><a href="/author/all">Autorzy</a></li>
+    <li><a href="/publisher/all">Wydawcy </a></li>
+    <li><a href="/book/form/add">Dodaj książkę</a></li>
+    <li><a href="/author/form/add">Dodaj autora</a></li>
+    <li><a href="/publisher/form/add">Dodaj wydawcę</a></li>
 </ul>
+<br>
