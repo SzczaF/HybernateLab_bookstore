@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
+import pl.coderslab.model.Book;
 import pl.coderslab.service.AuthorService;
 
 
@@ -14,7 +15,11 @@ import pl.coderslab.service.AuthorService;
 @RequiredArgsConstructor
 public class AuthorFormConrtroller {
     private final AuthorService authorService;
-
+    @GetMapping("/add")
+    public String add(Model model) {
+        model.addAttribute("author", new Author());
+        return "/author/form";
+    }
     @PostMapping("/add")
     public String addSave(Author author) {
 //        System.out.println(book.toString());
