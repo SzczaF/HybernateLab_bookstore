@@ -1,9 +1,8 @@
-
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<jsp:include page="../menu.jsp" />
+<jsp:include page="../menu.jsp"/>
 
 
 Lista książek<br><br>
@@ -22,7 +21,7 @@ Lista książek<br><br>
             <td>${book.rating}</td>
             <td>${book.description}</td>
             <td>${book.publisher.name}</td>
-<%--            <td>${book.author.fullName}</td>--%>
+                <%--            <td>${book.author.fullName}</td>--%>
             <td>
                 <a href="/book/form/edit/${book.id}">
                     <button>Edytuj</button>
@@ -36,5 +35,7 @@ Lista książek<br><br>
         </tr>
     </c:forEach>
 </table>
+<br>
+<button><a href="/book/form/add">Dodaj</a></button>
 </body>
 </html>

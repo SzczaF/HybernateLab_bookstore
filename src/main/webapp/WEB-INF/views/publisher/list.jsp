@@ -1,9 +1,8 @@
-
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<jsp:include page="../menu.jsp" />
+<jsp:include page="../menu.jsp"/>
 
 Lista wydawców<br><br>
 <table border="1">
@@ -30,5 +29,7 @@ Lista wydawców<br><br>
         </tr>
     </c:forEach>
 </table>
+<br>
+<button><a href="/publisher/form/add">Dodaj</a></button>
 </body>
 </html>
