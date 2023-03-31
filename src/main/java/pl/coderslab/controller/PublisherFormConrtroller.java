@@ -12,7 +12,7 @@ import pl.coderslab.service.PublisherService;
 
 
 @Controller
-@RequestMapping("/book/form")
+@RequestMapping("/publisher/form")
 @RequiredArgsConstructor
 public class PublisherFormConrtroller {
     private final PublisherService publisherService;
