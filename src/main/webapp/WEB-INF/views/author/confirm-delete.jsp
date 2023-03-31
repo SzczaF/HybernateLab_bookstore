@@ -1,24 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: szczaf
-  Date: 27.03.2023
-  Time: 21:52
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-    <style>
-        div.button {
-            float: left;
-            padding-top: 15px;
-            padding-right: 15px;
-        }
 
-    </style>
-</head>
-<body>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:include page="../menu.jsp" />
+
 <div>
     Czy na pewno chcesz usunąć tego autora?<br>
     id: ${author.id}<br>

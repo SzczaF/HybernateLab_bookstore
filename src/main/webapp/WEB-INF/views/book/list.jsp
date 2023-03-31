@@ -1,20 +1,10 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: ahacia
-  Date: 19.03.2023
-  Time: 15:45
-  To change this template use File | Settings | File Templates.
---%>
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-<a href="/book/form/add">Dodaj książkę</a><br>
-<a href="/author/form/add">Dodaj autora</a><br>
-<a href="/publisher/form/add">Dodaj wydawcę</a><br><br>
+
+<jsp:include page="../menu.jsp" />
+
+
 Lista książek<br><br>
 <table border="1">
     <tr>
