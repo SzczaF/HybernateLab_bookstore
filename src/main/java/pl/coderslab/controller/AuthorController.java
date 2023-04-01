@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.model.Author;
+import pl.coderslab.model.Publisher;
 import pl.coderslab.service.AuthorService;
 
 @Controller
@@ -55,5 +56,27 @@ public class AuthorController {
     public String all(Model model) {
         model.addAttribute("authorsList", authorService.all());
         return "/author/list";
+    }
+
+    @RequestMapping("/email/{email}")
+    @ResponseBody
+    public String getAuthorByEmail(@PathVariable String email) {
+        System.out.println(email);
+        Author author = authorService.findByEmail(email);
+        return author.toString();
+    }
+    @RequestMapping("/pesel/{pesel}")
+    @ResponseBody
+    public String getAuthorByPesel(@PathVariable String pesel) {
+        System.out.println(pesel);
+        Author author = authorService.findByPesel(pesel);
+        return author.toString();
+    }
+    @RequestMapping("/lastName/{lastName}")
+    @ResponseBody
+    public String getAuthorByLastName(@PathVariable String lastName) {
+        System.out.println(lastName);
+        Author author = authorService.findByLastName(lastName);
+        return author.toString();
     }
 }

@@ -9,13 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24f206eb-9ef9-4b8e-a489-5c986920904c" name="Changes" comment="Book and Category repository done, added Converter for Category + some changes and fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/AuthorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/PublisherRepository.java" afterDir="false" />
+    <list default="true" id="24f206eb-9ef9-4b8e-a489-5c986920904c" name="Changes" comment="Publisher Repo done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/PublisherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/PublisherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/AuthorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/AuthorService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +200,7 @@
       <workItem from="1680280140864" duration="37985000" />
       <workItem from="1680359430266" duration="2940000" />
       <workItem from="1680378070001" duration="1871000" />
-      <workItem from="1680380137172" duration="5182000" />
+      <workItem from="1680380137172" duration="7274000" />
     </task>
     <task id="LOCAL-00001" summary="init repo + part of classes done">
       <created>1679943414321</created>
@@ -302,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680380454646</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Publisher Repo done">
+      <created>1680385521093</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680385521093</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +327,7 @@
     <MESSAGE value="more view fixes and changes" />
     <MESSAGE value="added validators for book, author, publisher" />
     <MESSAGE value="Book and Category repository done, added Converter for Category + some changes and fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Book and Category repository done, added Converter for Category + some changes and fixes" />
+    <MESSAGE value="Publisher Repo done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Publisher Repo done" />
   </component>
 </project>

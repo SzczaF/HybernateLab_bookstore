@@ -8,5 +8,5 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
     Author getAuthorsByEmail(String email);
     Author getAuthorsByPesel(String pesel);
 //    Listę autorów o zadanym nazwisku.
-    Author getAuthorsByLastName(String pesel);
+    Author getAuthorsByLastName(String lastName);
 }
