@@ -40,6 +40,9 @@ public class Book {
     @Min(2)
     private int pages;
 
+    @ManyToOne
+    private Category category;
+
     public void addAuthor(Author author) {
         if (authors == null) {
             authors = new ArrayList<>();

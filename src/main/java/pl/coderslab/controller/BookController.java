@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
+import pl.coderslab.model.Category;
 import pl.coderslab.model.Publisher;
 import pl.coderslab.service.AuthorService;
 import pl.coderslab.service.BookService;
@@ -67,24 +68,67 @@ public class BookController {
         model.addAttribute("books", bookService.all());
         return "/book/list";
     }
+
     @RequestMapping("/all/rating/{rating}")
     @ResponseBody
     public String allWithRating(@PathVariable int rating) {
         return bookService.allWithRating(rating).toString();
     }
+
     @RequestMapping("/all/anyPublisher")
     @ResponseBody
     public String allWithAnyPublishers() {
+
         return bookService.allWithAnyPublisher().toString();
     }
+
     @RequestMapping("/all/publisher/{id}")
     @ResponseBody
     public String allWithPublisher(@PathVariable long id) {
+
         return bookService.allWithPublisher(id).toString();
     }
+
     @RequestMapping("/all/author/{id}")
     @ResponseBody
     public String allWithAuthor(@PathVariable long id) {
+
         return bookService.allWithAuthor(id).toString();
+    }
+
+
+    @RequestMapping("/title/{title}")
+    @ResponseBody
+    public String getBooksWithTitle(@PathVariable String title) {
+        return bookService.getBooksWithTitle(title).toString();
+    }
+
+    @RequestMapping("/category/{category}")
+    @ResponseBody
+    public String getBooksWithCategory(@PathVariable Category category) {
+        return bookService.getBookWithCategory(category).toString();
+    }
+
+    @RequestMapping("/categoryId/{id}")
+    @ResponseBody
+    public String getBooksWithCategoryId(@PathVariable Long id) {
+        return bookService.getBooksWithCategoryId(id).toString();
+    }
+    @RequestMapping("/author/{id}")
+    @ResponseBody
+    public String getBooksByAuthor(@PathVariable Author author) {
+        return bookService.getBooksByAuthor(author).toString();
+    }
+
+    @RequestMapping("/publisher/{id}")
+    @ResponseBody
+    public String getBooksByPublisher(@PathVariable Publisher publisher) {
+        return bookService.getBooksByPublisher(publisher).toString();
+    }
+
+    @RequestMapping("/category-sort-by-name/{category}")
+    @ResponseBody
+    public String getBooksByCategorySortedByName(@PathVariable Category category) {
+        return bookService.getBooksByCategorySortedByName(category).toString();
     }
 }
