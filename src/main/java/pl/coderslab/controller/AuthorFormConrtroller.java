@@ -3,11 +3,12 @@ package pl.coderslab.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
-import pl.coderslab.model.Book;
 import pl.coderslab.service.AuthorService;
 
+import javax.validation.Valid;
 
 
 @Controller
@@ -21,8 +22,10 @@ public class AuthorFormConrtroller {
         return "/author/form";
     }
     @PostMapping("/add")
-    public String addSave(Author author) {
-//        System.out.println(book.toString());
+    public String addSave(@Valid Author author, BindingResult result) {
+        if (result.hasErrors()) {
+            return "author/form";
+        }
         authorService.save(author);
         return "redirect:/author/all";
     }
@@ -33,8 +36,10 @@ public class AuthorFormConrtroller {
         return "/author/form";
     }
     @PostMapping("/edit/{id}")
-    public String editSave(Author author) {
-//        Author book = bookService.findById(id);
+    public String editSave(@Valid Author author, BindingResult result) {
+        if (result.hasErrors()) {
+            return "author/form";
+        }
         authorService.update(author);
         return "redirect:/author/all";
     }

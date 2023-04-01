@@ -3,6 +3,7 @@ package pl.coderslab.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Publisher;
 import pl.coderslab.service.PublisherService;
+
+import javax.validation.Valid;
 
 
 @Controller
@@ -24,8 +27,10 @@ public class PublisherFormConrtroller {
         return "/publisher/form";
     }
     @PostMapping("/add")
-    public String addSave(Publisher publisher) {
-//        System.out.println(book.toString());
+    public String addSave(@Valid Publisher publisher, BindingResult result) {
+        if (result.hasErrors()) {
+            return "publisher/form";
+        }
         publisherService.save(publisher);
         return "redirect:/publisher/all";
     }
@@ -36,8 +41,10 @@ public class PublisherFormConrtroller {
         return "/publisher/form";
     }
     @PostMapping("/edit/{id}")
-    public String editSave(Publisher publisher) {
-//        Publisher book = bookService.findById(id);
+    public String editSave(@Valid Publisher publisher, BindingResult result) {
+        if (result.hasErrors()) {
+            return "publisher/form";
+        }
         publisherService.update(publisher);
         return "redirect:/publisher/all";
     }

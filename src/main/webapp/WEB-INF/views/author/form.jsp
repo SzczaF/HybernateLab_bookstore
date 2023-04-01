@@ -6,7 +6,10 @@
 
 <form:form method="post" modelAttribute="author">
     Imię: <form:input path="firstName"/><br>
+    <form:errors path="firstName"/><br>
+
     Nazwisko: <form:input path="lastName"/><br>
+    <form:errors path="lastName"/><br>
     <button type="submit">Zatwierdź</button>
 </form:form>
 </body>

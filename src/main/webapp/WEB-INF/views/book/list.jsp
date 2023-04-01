@@ -13,6 +13,7 @@ Lista książek<br><br>
         <td>Rating</td>
         <td>Opis</td>
         <td>Wydawca</td>
+        <td>Liczba stron</td>
     </tr>
     <c:forEach items="${books}" var="book">
         <tr>
@@ -21,7 +22,9 @@ Lista książek<br><br>
             <td>${book.rating}</td>
             <td>${book.description}</td>
             <td>${book.publisher.name}</td>
-                <%--            <td>${book.author.fullName}</td>--%>
+            <td>${book.pages}</td>
+        <%--            TODO lista autorów--%>
+        <%--            <td>${book.author.fullName}</td>--%>
             <td>
                 <a href="/book/form/edit/${book.id}">
                     <button>Edytuj</button>
