@@ -26,11 +26,12 @@ public class PublisherController {
     @RequestMapping("/update/{id}/{name}")
     @ResponseBody
     public String update(@PathVariable long id, @PathVariable String name) {
-        Publisher publisher  = publisherService.findById(id);
+        Publisher publisher = publisherService.findById(id);
         publisher.setName(name);
         publisherService.update(publisher);
         return publisher.toString();
     }
+
     @RequestMapping("/delete/{id}")
     @ResponseBody
     public String delete(@PathVariable long id) {
@@ -48,9 +49,24 @@ public class PublisherController {
         return "Id dodanej książki to:"
                 + publisher.getId();
     }
+
     @RequestMapping("/all")
     public String all(Model model) {
         model.addAttribute("publishersList", publisherService.all());
         return "/publisher/list";
+    }
+
+    @RequestMapping("/nip/{nip}")
+    @ResponseBody
+    public String getPublisherByNip(@PathVariable(name = "nip") String nip) {
+        Publisher publisher = publisherService.getPublisherByNip(nip);
+        return publisher.toString();
+    }
+
+    @RequestMapping("/regon/{regon}")
+    @ResponseBody
+    public String getPublisherByRegon(@PathVariable String regon) {
+        Publisher publisher = publisherService.getPublisherByRegon(regon);
+        return publisher.toString();
     }
 }

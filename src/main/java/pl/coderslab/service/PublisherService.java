@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.coderslab.dao.PublisherDao;
 import pl.coderslab.model.Publisher;
+import pl.coderslab.repository.PublisherRepository;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
 public class PublisherService {
 
     private final PublisherDao publisherDao;
+    private final PublisherRepository publisherRepository;
 
     public void save(Publisher publisher){
         publisherDao.save(publisher);
@@ -30,6 +32,14 @@ public class PublisherService {
     }
     public List<Publisher> all(){
         return publisherDao.all();
+    }
+
+    public Publisher getPublisherByNip(String nip){
+        return publisherRepository.findFirstPublishersByNip(nip);
+    }
+
+    public Publisher getPublisherByRegon(String regon) {
+        return publisherRepository.findFirstPublishersByRegon(regon);
     }
 
 }
